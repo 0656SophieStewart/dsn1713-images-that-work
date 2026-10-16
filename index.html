@@ -113,7 +113,7 @@
           <article class="gear-card card h-100 bg-white border-0 rounded-0">
             <!-- ========== TASK 4: change src to your optimized .webp file ========== -->
             <div class="gear-card__image ratio ratio-4x3 overflow-hidden">
-              <img src="imagesproduct-jacket.webp" alt="Ridgeline Apex Shell Jacket in olive green">
+              <img src="images/product-jacket.webp" alt="orange jacket">
             </div>
             <!-- ========== END TASK 4 ========== -->
             <div class="card-body p-4">
@@ -132,7 +132,7 @@
           <article class="gear-card card h-100 bg-white border-0 rounded-0">
             <!-- ========== TASK 4: change src to your optimized .webp file ========== -->
             <div class="gear-card__image ratio ratio-4x3 overflow-hidden">
-              <img src="imagesproduct-boots.webp" alt="Ridgeline Summit Mid hiking boots in brown leather">
+              <img src="images/product-boots.webp" alt="Hiking boots">
             </div>
             <!-- ========== END TASK 4 ========== -->
             <div class="card-body p-4">
@@ -227,25 +227,34 @@
   </section>
 
 
-  <!-- ============================================================
+ <!-- ============================================================
        LANDSCAPE BANNER
        ============================================================ -->
   <section class="landscape-banner d-flex align-items-center justify-content-center">
 
-    <!-- ========== TASKS 6 + 7: BANNER ==========
-         Task 6: export banner-wide.webp (1920px) and
-                 banner-portrait.webp (600px, portrait crop) from
-                 images/landscape-banner.png.
-         Task 7: add a <picture> RIGHT HERE, as the first child of this
-                 <section>, before the landscape-banner__content div.
-                   - <source> for max-width: 768px → banner-portrait.webp
-                   - <source> for min-width: 769px → banner-wide.webp
-                   - <img> fallback with src="images/banner-wide.webp",
-                     a meaningful alt, and class="landscape-banner__img"
-         Then finish Task 7 in css/style.css.
-    -->
+    <!-- ========== TASKS 6 + 7: RESPONSIVE BANNER ========== -->
+    <picture>
+      <source
+        media="(max-width: 768px)"
+        srcset="images/banner-portrait.webp">
 
+      <source
+        media="(min-width: 769px)"
+        srcset="images/banner-wide.webp">
+
+      <img
+        src="images/banner-wide.webp"
+        alt="A landscape view of a trail through the forest"
+        class="landscape-banner__img">
+    </picture>
     <!-- ========== END TASKS 6 + 7 ========== -->
+
+    <div class="landscape-banner__content text-center px-4 py-5">
+      <h2 class="banner-title font-display text-white mb-4">Every trail<br>has a story.</h2>
+      <p class="lede mb-4">Ridgeline gear is built for the ones worth telling.</p>
+      <a href="#" class="btn btn-ridge-outline-light">Find Your Trail</a>
+    </div>
+  </section>
 
     <div class="landscape-banner__content text-center px-4 py-5">
       <h2 class="banner-title font-display text-white mb-4">Every trail<br>has a story.</h2>
