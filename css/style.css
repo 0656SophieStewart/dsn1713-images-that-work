@@ -234,13 +234,22 @@ img {
 
 /* TASK 3, STEP 1: Delete the background-image line below.
    Leave every other property in this rule alone. */
+
 .hero {
   position: relative;
   min-height: 90vh;
-  background-image: url('../images/hero.png');
   background-size: cover;
   background-position: center;
 }
+
+.hero__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 
 /* TASK 3, STEP 2: Write a new rule here that targets your
    hero <img> (give it the class hero__img) so it fills the
